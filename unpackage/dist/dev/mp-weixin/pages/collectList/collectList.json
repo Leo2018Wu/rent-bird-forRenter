@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小区",
+  "usingComponents": {
+    "room-sku": "/components/roomSku/roomSku"
+  }
+}

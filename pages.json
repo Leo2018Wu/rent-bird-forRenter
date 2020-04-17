@@ -1,0 +1,83 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "房源",
+				"disableScroll":true
+			}
+		}
+	    ,{
+            "path" : "pages/roomDetail/roomDetail",
+            "style" : {
+				"navigationBarTitleText": "房间详情"
+			}
+        }
+        ,{
+            "path" : "pages/mine/mine",
+            "style" : {
+				"navigationBarTitleText": "我的",
+				"disableScroll":true
+			}
+        }
+        ,{
+            "path" : "pages/userInfo/userInfo",
+            "style" : {
+				"navigationBarTitleText": "基本信息",
+				"disableScroll":true
+			}
+        }
+        ,{
+            "path" : "pages/aboutUs/aboutUs",
+            "style" : {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "关于我们",
+				"disableScroll":true
+			}
+        }
+        ,{
+            "path" : "pages/collectList/collectList",
+            "style" : {
+				"navigationBarTitleText": "小区"
+			}
+        }
+        ,{
+            "path" : "pages/landlordRoomList/landlordRoomList",
+            "style" : {
+				"navigationBarTitleText": "房东"
+			}
+        }
+        ,{
+            "path" : "pages/privacy/privacy",
+            "style" : {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "使用协议及隐私政策"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "房源",
+		"navigationBarBackgroundColor": "#3c76ed",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"selectedColor": "#3c76ed",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "房源",
+				"iconPath": "static/home0.png",
+				"selectedIconPath": "static/home1.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/mine0.png",
+				"selectedIconPath": "static/mine1.png"
+			}
+		],
+		"color": "#777777"
+	}
+}

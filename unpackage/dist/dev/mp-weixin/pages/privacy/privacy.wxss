@@ -1,0 +1,16 @@
+
+.privacy.data-v-6a6bd9ae{
+	padding: 40rpx 37rpx;
+}
+.itemBar.data-v-6a6bd9ae{
+	color: #333333;
+	font-size: 33rpx;
+	font-weight: bold;
+	margin-bottom: 35rpx;
+}
+.liContent.data-v-6a6bd9ae,.itemContent.data-v-6a6bd9ae{
+	font-size: 28rpx;
+	color: #666666;
+	margin-bottom: 35rpx;
+}
+
