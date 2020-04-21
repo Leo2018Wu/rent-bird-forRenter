@@ -46,7 +46,7 @@
 			<view class="btnBox_save" @click="save(false)">保存</view>
 			<view class="btnBox_apply" @click="save(true)">申请授权</view>
 		</view>
-		<view v-if="user.userInfo.authStatus == 1 || user.userInfo.authStatus == 2"  class="saveBtn" @click="save(false)">保存</view>
+		<view v-else  class="saveBtn" @click="save(false)">保存</view>
 	</view>
 </template>
 

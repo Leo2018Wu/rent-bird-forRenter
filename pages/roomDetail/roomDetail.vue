@@ -71,8 +71,8 @@
 		</view>
 		<view class="btnBox">
 			<view class="btnBox_collect" @click="follow(1)">
-				<image v-if="roomInfo.attentionStatus == 1" src="../../static/like1.png" mode="aspectFill" :class="{aniLike:roomInfo.attentionStatus == 1}"></image>
-				<image v-else src="../../static/like0.png" mode="aspectFill" :class="{aniLike:roomInfo.attentionStatus == 1}"></image>
+				<image v-if="roomInfo.attentionStatus == 1" src="../../static/like1.png" mode="aspectFit" :class="{aniLike:roomInfo.attentionStatus == 1}"></image>
+				<image v-else src="../../static/like0.png" mode="aspectFit" :class="{aniLike:roomInfo.attentionStatus == 1}"></image>
 				<!-- <image src="../../static/like0.png" mode="aspectFit"></image> -->
 				<view>关注</view>
 			</view>
@@ -83,7 +83,7 @@
 		<cover-view v-if="isShowContactModal" class="contact_modal">
 			<cover-view class="contact_modal_landlordInfo">
 				<cover-image v-if="roomInfo.landlordImg" :src="roomInfo.landlordImg" mode="aspectFit"></cover-image>
-				<cover-image v-else src="../../static/house1.jpg" mode="aspectFit"></cover-image>
+				<cover-image v-else src="../../static/defaultHouse1.jpg" mode="aspectFit"></cover-image>
 				<cover-view class="contact_modal_landlordInfo_name">{{roomInfo.landlordName}}{{roomInfo.landlordSex == 1 ? '女士' : '先生' }}</cover-view>
 				<cover-view v-if="roomInfo.landlordAttStatus == 1" class="contact_modal_landlordInfo_save saved">已关注</cover-view>
 				<cover-view v-else class="contact_modal_landlordInfo_save" @click="follow(2)">关注房东</cover-view>
@@ -149,11 +149,7 @@
 					},
 				],
 				swiperCurrent:1,
-				imgUrls:[
-					'../../static/house1.jpg',
-					'../../static/house2.jpg',
-					'../../static/house3.jpg',
-				],
+				imgUrls:['../../static/defaultHouse1.jpg'],
 				roomInfo:{}
 			}
 		},

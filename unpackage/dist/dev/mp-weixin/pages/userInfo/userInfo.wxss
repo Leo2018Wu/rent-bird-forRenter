@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.userInfo.data-v-df16ed12 {
+.userInfo.data-v-595ec237 {
   padding: 0 45rpx 0 48rpx;
 }
-.inpArrow.data-v-df16ed12 {
+.inpArrow.data-v-595ec237 {
   width: 19rpx;
   height: 100%;
   margin-left: 10rpx;
@@ -39,22 +39,22 @@
           align-items: center;
   margin-top: 4rpx;
 }
-.inpArrow image.data-v-df16ed12 {
+.inpArrow image.data-v-595ec237 {
     width: 100%;
     height: 30rpx;
 }
-.form-input-placeholder.data-v-df16ed12 {
+.form-input-placeholder.data-v-595ec237 {
   font-size: 32rpx;
   text-align: right !important;
 }
-.form-input.data-v-df16ed12 {
+.form-input.data-v-595ec237 {
   width: 100%;
   height: 100%;
   text-align: right;
   font-size: 32rpx;
   color: #999999;
 }
-.statusBox.data-v-df16ed12 {
+.statusBox.data-v-595ec237 {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -67,7 +67,7 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.statusBox view.data-v-df16ed12 {
+.statusBox view.data-v-595ec237 {
     padding: 0 40rpx;
     height: 53rpx;
     line-height: 53rpx;
@@ -75,15 +75,15 @@
     border-radius: 27rpx;
     font-size: 24rpx;
 }
-.statusBox_unAuth.data-v-df16ed12 {
+.statusBox_unAuth.data-v-595ec237 {
     color: #999999;
     background-color: #F0F0F0;
 }
-.statusBox_authed.data-v-df16ed12 {
+.statusBox_authed.data-v-595ec237 {
     background-color: #3c76ed;
     color: #FFFFFF;
 }
-.btnBox.data-v-df16ed12 {
+.btnBox.data-v-595ec237 {
   width: calc(100% - 152rpx);
   height: 96rpx;
   display: -webkit-box;
@@ -96,22 +96,22 @@
   bottom: 100rpx;
   left: 76rpx;
 }
-.btnBox view.data-v-df16ed12 {
+.btnBox view.data-v-595ec237 {
     width: calc((100% - 25rpx) / 2);
     text-align: center;
     height: 100%;
     line-height: 96rpx;
     border-radius: 10rpx;
 }
-.btnBox_save.data-v-df16ed12 {
+.btnBox_save.data-v-595ec237 {
     background-color: #3c76ed;
     color: #FFFFFF;
 }
-.btnBox_apply.data-v-df16ed12 {
+.btnBox_apply.data-v-595ec237 {
     border: 1rpx solid #3c76ed;
     color: #3c76ed;
 }
-.saveBtn.data-v-df16ed12 {
+.saveBtn.data-v-595ec237 {
   width: 574rpx;
   height: 96rpx;
   line-height: 96rpx;

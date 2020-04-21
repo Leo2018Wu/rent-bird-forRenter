@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/roomDetail/roomDetail",
+    "pages/mine/mine",
+    "pages/userInfo/userInfo",
+    "pages/aboutUs/aboutUs",
+    "pages/collectList/collectList",
+    "pages/landlordRoomList/landlordRoomList",
+    "pages/privacy/privacy",
+    "pages/spread/spread"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "房源",
+    "navigationBarBackgroundColor": "#3c76ed",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#3c76ed",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "房源",
+        "iconPath": "static/home0.png",
+        "selectedIconPath": "static/home1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/mine0.png",
+        "selectedIconPath": "static/mine1.png"
+      }
+    ],
+    "color": "#777777"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取用户位置信息"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx2d48bdae69b0cd75"
+  ],
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

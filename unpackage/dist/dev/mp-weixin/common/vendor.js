@@ -1555,9 +1555,9 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 110:
+/***/ 120:
 /*!*****************************************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/node_modules/async-validator/dist-web/index.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/node_modules/async-validator/dist-web/index.js ***!
   \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2910,11 +2910,11 @@ Schema.warning = warning;
 Schema.messages = messages;var _default =
 
 Schema;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../chromeDownload/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 111)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../chromeDownload/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 121)))
 
 /***/ }),
 
-/***/ 111:
+/***/ 121:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -2945,7 +2945,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 112);
+        if (!path) path = __webpack_require__(/*! path */ 122);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -2959,7 +2959,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 112:
+/***/ 122:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -3269,28 +3269,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 111)))
-
-/***/ }),
-
-/***/ 127:
-/*!***********************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/filters/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.hidePhone = hidePhone;
-function hidePhone(tel) {
-  if (tel) {
-    var reg = /(\d{3})\d{4}(\d{4})/;
-    var tel = tel.replace(reg, "$1****$2");
-    return tel;
-  } else {
-    return "";
-  }
-}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 121)))
 
 /***/ }),
 
@@ -3425,7 +3404,7 @@ function normalizeComponent (
 
 /***/ 15:
 /*!***************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/lib/request/index.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/lib/request/index.js ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3563,7 +3542,7 @@ var _default = {
 
 /***/ 16:
 /*!*******************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/lib/request/interface.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/lib/request/interface.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3639,7 +3618,7 @@ function _page_error(err) {
 
 /***/ 17:
 /*!****************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/lib/request/config.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/lib/request/config.js ***!
   \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3648,10 +3627,9 @@ function _page_error(err) {
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //  http 请求配置项
 var _default = {
   //	开发者服务器接口地址
-  // wxRequest.defaults.baseURL = "https://funnyduck.raysler.com/rentbird_test"; //测试地址
-  // wxRequest.defaults.baseURL = "http://192.168.10.120:8889";
   // url: "http://192.168.10.120:8891",
-  url: "https://funnyduck.raysler.com/rbInterme_test",
+  // url: "https://funnyduck.raysler.com/rbInterme_test",
+  url: "https://funnyduck.raysler.com/rbInterme",
   //	请求的参数	
   data: {},
   //	设置请求的 header，header 中不能设置 Referer。
@@ -3673,7 +3651,7 @@ var _default = {
 
 /***/ 18:
 /*!*********************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/store/index.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/store/index.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3682,12 +3660,14 @@ var _default = {
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 19));
 var _user = _interopRequireDefault(__webpack_require__(/*! ./module/user */ 20));
-var _getter = _interopRequireDefault(__webpack_require__(/*! ./getter.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _global = _interopRequireDefault(__webpack_require__(/*! ./module/global.js */ 21));
+var _getter = _interopRequireDefault(__webpack_require__(/*! ./getter.js */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 _vue.default.use(_vuex.default);
 var store = new _vuex.default.Store({
   modules: {
-    user: _user.default },
+    user: _user.default,
+    global: _global.default },
 
   getters: _getter.default });var _default =
 
@@ -10679,7 +10659,7 @@ internalMixin(Vue);
 
 /***/ 20:
 /*!***************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/store/module/user.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/store/module/user.js ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10728,8 +10708,30 @@ var actions = {
 /***/ }),
 
 /***/ 21:
+/*!*****************************************************************!*\
+  !*** D:/vueProjects/rent_bird_forRenter/store/module/global.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var state = {
+  jumpCommunityName: '' //关注房源地址
+};
+var mutations = {
+  SET_NAME: function SET_NAME(state, data) {
+    state.jumpCommunityName = data;
+  } };var _default =
+
+{
+  state: state,
+  mutations: mutations };exports.default = _default;
+
+/***/ }),
+
+/***/ 22:
 /*!**********************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/store/getter.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/store/getter.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10737,15 +10739,16 @@ var actions = {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var getters = {
   openId: function openId(state) {return state.user.openId;},
-  userInfo: function userInfo(state) {return state.user.userInfo;} };var _default =
+  userInfo: function userInfo(state) {return state.user.userInfo;},
+  jumpCommunityName: function jumpCommunityName(state) {return state.global.jumpCommunityName;} };var _default =
 
 getters;exports.default = _default;
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /*!***********************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/util/validate.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/util/validate.js ***!
   \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10774,15 +10777,24 @@ utils;exports.default = _default;
 
 /***/ }),
 
-/***/ 29:
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
+/***/ 24:
+/*!***********************************************************!*\
+  !*** D:/vueProjects/rent_bird_forRenter/filters/index.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 30);
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.hidePhone = hidePhone;
+function hidePhone(tel) {
+  if (tel) {
+    var reg = /(\d{3})\d{4}(\d{4})/;
+    var tel = tel.replace(reg, "$1****$2");
+    return tel;
+  } else {
+    return "";
+  }
+}
 
 /***/ }),
 
@@ -10817,7 +10829,19 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 30:
+/***/ 31:
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ 32);
+
+
+/***/ }),
+
+/***/ 32:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -10848,7 +10872,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 31);
+module.exports = __webpack_require__(/*! ./runtime */ 33);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -10865,7 +10889,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 31:
+/***/ 33:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -11597,9 +11621,9 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 34:
 /*!********************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/util/login.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/util/login.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -11625,9 +11649,9 @@ module.exports = {
 
 /***/ }),
 
-/***/ 33:
+/***/ 35:
 /*!*****************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/util/qqmap-wx-jssdk.js ***!
+  !*** D:/vueProjects/rent_bird_forRenter/util/qqmap-wx-jssdk.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -12761,7 +12785,7 @@ module.exports = QQMapWX;
 
 /***/ 4:
 /*!*****************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/pages.json ***!
+  !*** D:/vueProjects/rent_bird_forRenter/pages.json ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -13671,19 +13695,19 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ 7:
 /*!**********************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/pages.json?{"type":"style"} ***!
+  !*** D:/vueProjects/rent_bird_forRenter/pages.json?{"type":"style"} ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "房源", "disableScroll": true, "usingComponents": { "login-modal": "/components/rent_login/rent_login", "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/roomDetail/roomDetail": { "navigationBarTitleText": "房间详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/mine/mine": { "navigationBarTitleText": "我的", "disableScroll": true, "usingComponents": { "login-modal": "/components/rent_login/rent_login" }, "usingAutoImportComponents": {} }, "pages/userInfo/userInfo": { "navigationBarTitleText": "基本信息", "disableScroll": true, "usingComponents": { "evan-form-item": "/components/evan-form/evan-form-item", "evan-form": "/components/evan-form/evan-form" }, "usingAutoImportComponents": { "evan-form": "/components/evan-form/evan-form" } }, "pages/aboutUs/aboutUs": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTextStyle": "black", "navigationBarTitleText": "关于我们", "disableScroll": true, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/collectList/collectList": { "navigationBarTitleText": "小区", "usingComponents": { "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/landlordRoomList/landlordRoomList": { "navigationBarTitleText": "房东", "usingComponents": { "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/privacy/privacy": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTextStyle": "black", "navigationBarTitleText": "使用协议及隐私政策", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "房源", "navigationBarBackgroundColor": "#3c76ed", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "房源", "disableScroll": true, "usingComponents": { "login-modal": "/components/rent_login/rent_login", "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/roomDetail/roomDetail": { "navigationBarTitleText": "房间详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/mine/mine": { "navigationBarTitleText": "我的", "disableScroll": true, "usingComponents": { "login-modal": "/components/rent_login/rent_login" }, "usingAutoImportComponents": {} }, "pages/userInfo/userInfo": { "navigationBarTitleText": "基本信息", "disableScroll": true, "usingComponents": { "evan-form-item": "/components/evan-form/evan-form-item", "evan-form": "/components/evan-form/evan-form" }, "usingAutoImportComponents": { "evan-form": "/components/evan-form/evan-form" } }, "pages/aboutUs/aboutUs": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTextStyle": "black", "navigationBarTitleText": "关于我们", "disableScroll": true, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/collectList/collectList": { "navigationBarTitleText": "小区", "usingComponents": { "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/landlordRoomList/landlordRoomList": { "navigationBarTitleText": "房东", "usingComponents": { "room-sku": "/components/roomSku/roomSku" }, "usingAutoImportComponents": {} }, "pages/privacy/privacy": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTextStyle": "black", "navigationBarTitleText": "使用协议及隐私政策", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/spread/spread": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTextStyle": "black", "navigationBarTitleText": "推广收租鸟", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "房源", "navigationBarBackgroundColor": "#3c76ed", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 
 /***/ 8:
 /*!*********************************************************************!*\
-  !*** D:/vueProjects/rent-bird-forRenter/pages.json?{"type":"stat"} ***!
+  !*** D:/vueProjects/rent_bird_forRenter/pages.json?{"type":"stat"} ***!
   \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

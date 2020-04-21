@@ -19,7 +19,7 @@
 				</view>
 			</view>
 			<view class="jump">
-				<view class="jump_li" v-for="(item, index) in jumpList" :key="index" @click="jump(item.pathUrl)">
+				<view class="jump_li" v-for="(item, index) in jumpList" :key="index" @click="jump(item.pathUrl,item.needLogin)">
 					<image class="jump_li_iconUrl" :src="item.iconUrl" mode="aspectFit"></image>
 					<view>{{ item.name }}</view>
 					<image class="jump_li_link" src="../../static/right_arrow.png" mode="aspectFit"></image>
@@ -45,17 +45,20 @@ export default {
 				{
 					iconUrl: '../../static/myItem1.png',
 					name: '基本信息',
-					pathUrl:'../userInfo/userInfo'
+					pathUrl:'../userInfo/userInfo',
+					needLogin:true
 				},
 				{
 					iconUrl: '../../static/myItem2.png',
 					name: '推广收租鸟',
-					pathUrl:''
+					pathUrl:'../spread/spread',
+					needLogin:false
 				},
 				{
 					iconUrl: '../../static/myItem3.png',
 					name: '关于我们',
-					pathUrl:'../aboutUs/aboutUs'
+					pathUrl:'../aboutUs/aboutUs',
+					needLogin:false
 				}
 			],
 			collectList: [
@@ -83,8 +86,8 @@ export default {
 	},
 	methods: {
 		
-		jump(url){
-			if(this.user.userInfo.id){
+		jump(url,needLogin){
+			if(this.user.userInfo.id || !needLogin){
 				uni.navigateTo({
 					url
 				})

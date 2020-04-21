@@ -24,36 +24,36 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-swiper.data-v-22835617 {
+swiper.data-v-f3b9a252 {
   width: 100%;
   height: 434rpx;
 }
-.swiper.data-v-22835617 {
+.swiper.data-v-f3b9a252 {
   width: 100%;
   height: 434rpx;
   position: relative;
 }
-.swiper_image.data-v-22835617 {
+.swiper_image.data-v-f3b9a252 {
     width: 100%;
     height: 100%;
 }
-.swiper_dots.data-v-22835617 {
+.swiper_dots.data-v-f3b9a252 {
     position: absolute;
     right: 20rpx;
     bottom: 30rpx;
     font-size: 30rpx;
     color: #FFFFFF;
 }
-.swiper_dots.data-v-22835617::first-letter {
+.swiper_dots.data-v-f3b9a252::first-letter {
       opacity: 0.6;
 }
-.content.data-v-22835617 {
+.content.data-v-f3b9a252 {
   width: 100%;
   height: 100%;
   padding: 50rpx 40rpx 44rpx 40rpx;
   border-bottom: 22rpx solid #F8F8F8;
 }
-.content_price.data-v-22835617 {
+.content_price.data-v-f3b9a252 {
     color: #E7624B;
     font-size: 50rpx;
     font-weight: bold;
@@ -61,12 +61,12 @@ swiper.data-v-22835617 {
     display: -webkit-flex;
     display: flex;
 }
-.content_price ._span.data-v-22835617 {
+.content_price ._span.data-v-f3b9a252 {
       font-size: 30rpx;
       -webkit-align-self: center;
               align-self: center;
 }
-.content_name.data-v-22835617 {
+.content_name.data-v-f3b9a252 {
     margin-top: 20rpx;
     font-size: 36rpx;
     color: #444444;
@@ -74,7 +74,7 @@ swiper.data-v-22835617 {
     padding-bottom: 46rpx;
     border-bottom: 1rpx solid #F0F0F0;
 }
-.content_intro.data-v-22835617 {
+.content_intro.data-v-f3b9a252 {
     width: calc(100% - 20rpx);
     margin-left: 10rpx;
     padding: 40rpx 0;
@@ -86,7 +86,7 @@ swiper.data-v-22835617 {
     -webkit-justify-content: space-between;
             justify-content: space-between;
 }
-.content_intro_li.data-v-22835617 {
+.content_intro_li.data-v-f3b9a252 {
       width: -webkit-fit-content;
       width: fit-content;
       color: #555555;
@@ -94,16 +94,16 @@ swiper.data-v-22835617 {
       font-weight: bold;
       text-align: center;
 }
-.content_intro_li ._sup.data-v-22835617 {
+.content_intro_li ._sup.data-v-f3b9a252 {
         font-size: 14rpx;
 }
-.content_intro_li_name.data-v-22835617 {
+.content_intro_li_name.data-v-f3b9a252 {
         font-size: 26rpx;
         color: #999999;
         margin-top: 10rpx;
         font-weight: normal;
 }
-.content_facility.data-v-22835617 {
+.content_facility.data-v-f3b9a252 {
     width: 100%;
     padding: 32rpx 0 22rpx 0;
     display: -webkit-box;
@@ -112,7 +112,7 @@ swiper.data-v-22835617 {
     -webkit-flex-wrap: wrap;
             flex-wrap: wrap;
 }
-.content_facility_li.data-v-22835617 {
+.content_facility_li.data-v-f3b9a252 {
       height: 48rpx;
       width: -webkit-fit-content;
       width: fit-content;
@@ -124,10 +124,10 @@ swiper.data-v-22835617 {
       background-color: #F7F7F7;
       margin-bottom: 20rpx;
 }
-.content_facility_li.data-v-22835617:not(:last-of-type) {
+.content_facility_li.data-v-f3b9a252:not(:last-of-type) {
         margin-right: 20rpx;
 }
-.content_other.data-v-22835617 {
+.content_other.data-v-f3b9a252 {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -135,27 +135,27 @@ swiper.data-v-22835617 {
     color: #444444;
     font-size: 30rpx;
 }
-.content_other_item.data-v-22835617:first-of-type {
+.content_other_item.data-v-f3b9a252:first-of-type {
       margin-right: auto;
 }
-.content_other ._span.data-v-22835617 {
+.content_other ._span.data-v-f3b9a252 {
       font-weight: bold;
 }
-.roommate.data-v-22835617 {
+.roommate.data-v-f3b9a252 {
   width: 100%;
   height: 100%;
   padding: 50rpx 40rpx 184rpx 40rpx;
 }
-.roommate_name.data-v-22835617 {
+.roommate_name.data-v-f3b9a252 {
     font-size: 44rpx;
     color: #444444;
     font-weight: bold;
     padding-bottom: 24rpx;
 }
-.roommate_li.data-v-22835617 {
+.roommate_li.data-v-f3b9a252 {
     height: 108rpx;
 }
-.roommate_li_inner.data-v-22835617 {
+.roommate_li_inner.data-v-f3b9a252 {
       width: 100%;
       height: 100%;
       display: -webkit-box;
@@ -169,37 +169,37 @@ swiper.data-v-22835617 {
               justify-content: flex-start;
       border-bottom: 1rpx solid #F0F0F0;
 }
-.roommate_li_inner .sexImg.data-v-22835617 {
+.roommate_li_inner .sexImg.data-v-f3b9a252 {
         width: 60rpx;
         height: 60rpx;
         margin-right: 28rpx;
 }
-.roommate_li_inner .roomNo.data-v-22835617 {
+.roommate_li_inner .roomNo.data-v-f3b9a252 {
         font-size: 30rpx;
         color: #555555;
         margin-right: auto;
 }
-.roommate_li_inner .sex.data-v-22835617 {
+.roommate_li_inner .sex.data-v-f3b9a252 {
         color: #999999;
         font-size: 30rpx;
         margin-right: 18rpx;
 }
-.roommate_li_inner .sexIcon.data-v-22835617 {
+.roommate_li_inner .sexIcon.data-v-f3b9a252 {
         width: 29rpx;
         height: 29rpx;
 }
-.introduce.data-v-22835617 {
+.introduce.data-v-f3b9a252 {
   width: 100%;
   height: 100%;
   padding: 50rpx 40rpx 0 40rpx;
 }
-.introduce_name.data-v-22835617 {
+.introduce_name.data-v-f3b9a252 {
     font-size: 44rpx;
     color: #444444;
     font-weight: bold;
     padding-bottom: 48rpx;
 }
-.introduce_facility.data-v-22835617 {
+.introduce_facility.data-v-f3b9a252 {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -210,24 +210,24 @@ swiper.data-v-22835617 {
     -webkit-flex-wrap: wrap;
             flex-wrap: wrap;
 }
-.introduce_facility_li.data-v-22835617 {
+.introduce_facility_li.data-v-f3b9a252 {
       width: calc(100% / 5);
       margin-bottom: 48rpx;
       text-align: center;
       font-size: 22rpx;
       color: #444444;
 }
-.introduce_facility_li_img.data-v-22835617 {
+.introduce_facility_li_img.data-v-f3b9a252 {
         width: 52rpx;
         height: 52rpx;
         margin-bottom: 18rpx;
 }
-.introduce_desc.data-v-22835617 {
+.introduce_desc.data-v-f3b9a252 {
     color: #555555;
     font-size: 31rpx;
     line-height: 44rpx;
 }
-.btnBox.data-v-22835617 {
+.btnBox.data-v-f3b9a252 {
   width: 100%;
   height: 164rpx;
   padding-right: 40rpx;
@@ -246,7 +246,7 @@ swiper.data-v-22835617 {
   box-shadow: 0rpx 2rpx 16rpx 2rpx rgba(68, 68, 82, 0.08);
   background-color: #FFFFFF;
 }
-.btnBox_collect.data-v-22835617 {
+.btnBox_collect.data-v-f3b9a252 {
     height: 100rpx;
     display: -webkit-box;
     display: -webkit-flex;
@@ -264,11 +264,11 @@ swiper.data-v-22835617 {
     color: #444444;
     font-size: 28rpx;
 }
-.btnBox_collect image.data-v-22835617 {
+.btnBox_collect image.data-v-f3b9a252 {
       width: 42rpx;
       height: 40rpx;
 }
-.btnBox_contact.data-v-22835617 {
+.btnBox_contact.data-v-f3b9a252 {
     width: 494rpx;
     height: 100rpx;
     text-align: center;
@@ -279,11 +279,11 @@ swiper.data-v-22835617 {
     font-size: 32rpx;
     font-weight: bold;
 }
-.grayFilter.data-v-22835617 {
+.grayFilter.data-v-f3b9a252 {
   -webkit-filter: opacity(30%);
           filter: opacity(30%);
 }
-.contactMask.data-v-22835617 {
+.contactMask.data-v-f3b9a252 {
   position: fixed;
   width: 750rpx;
   height: 100vh;
@@ -295,7 +295,7 @@ swiper.data-v-22835617 {
   background-color: #000000;
   opacity: 0.4;
 }
-.contact_modal.data-v-22835617 {
+.contact_modal.data-v-f3b9a252 {
   width: 630rpx;
   height: 342rpx;
   border-radius: 15rpx;
@@ -307,14 +307,14 @@ swiper.data-v-22835617 {
   text-align: center;
   padding: 74rpx 0 54rpx 0;
 }
-.contact_modal_landlordInfo.data-v-22835617 {
+.contact_modal_landlordInfo.data-v-f3b9a252 {
     width: 100%;
     height: 86rpx;
     line-height: 86rpx;
     font-weight: bold;
     position: relative;
 }
-.contact_modal_landlordInfo cover-image.data-v-22835617 {
+.contact_modal_landlordInfo cover-image.data-v-f3b9a252 {
       width: 86rpx;
       height: 86rpx;
       display: inline-block;
@@ -323,10 +323,10 @@ swiper.data-v-22835617 {
       left: 44rpx;
       top: 0;
 }
-.contact_modal_landlordInfo cover-view.data-v-22835617 {
+.contact_modal_landlordInfo cover-view.data-v-f3b9a252 {
       display: inline-block;
 }
-.contact_modal_landlordInfo_name.data-v-22835617 {
+.contact_modal_landlordInfo_name.data-v-f3b9a252 {
       height: 86rpx;
       line-height: 86rpx;
       color: #333333;
@@ -335,11 +335,11 @@ swiper.data-v-22835617 {
       left: 152rpx;
       top: 0;
 }
-.contact_modal_landlordInfo .saved.data-v-22835617 {
+.contact_modal_landlordInfo .saved.data-v-f3b9a252 {
       background-color: #F0F0F0;
       color: #999999;
 }
-.contact_modal_landlordInfo_save.data-v-22835617 {
+.contact_modal_landlordInfo_save.data-v-f3b9a252 {
       background-color: #FFA044;
       border-radius: 10rpx;
       width: 173rpx;
@@ -352,14 +352,14 @@ swiper.data-v-22835617 {
       top: 10rpx;
       right: 44rpx;
 }
-.contact_modal_telBox.data-v-22835617 {
+.contact_modal_telBox.data-v-f3b9a252 {
     width: 100%;
     height: 62rpx;
     position: absolute;
     bottom: 64rpx;
     left: 0;
 }
-.contact_modal_telBox_tel.data-v-22835617 {
+.contact_modal_telBox_tel.data-v-f3b9a252 {
       height: 62rpx;
       line-height: 62rpx;
       position: absolute;
@@ -369,7 +369,7 @@ swiper.data-v-22835617 {
       color: #333333;
       font-weight: bold;
 }
-.contact_modal_telBox_btn.data-v-22835617 {
+.contact_modal_telBox_btn.data-v-f3b9a252 {
       background-color: #3C76ED;
       border-radius: 10rpx;
       width: 173rpx;
@@ -382,14 +382,14 @@ swiper.data-v-22835617 {
       top: 0rpx;
       right: 44rpx;
 }
-.contact_modal_del.data-v-22835617 {
+.contact_modal_del.data-v-f3b9a252 {
     width: 32rpx;
     height: 32rpx;
     position: absolute;
     right: 32rpx;
     top: 32rpx;
 }
-.addPadding.data-v-22835617 {
+.addPadding.data-v-f3b9a252 {
   padding: 50rpx 40rpx 180rpx 40rpx;
 }
 

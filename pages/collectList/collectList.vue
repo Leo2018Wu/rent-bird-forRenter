@@ -1,6 +1,6 @@
 <template>
 	<view class="collectList" v-if="init">
-		<view v-if="followType == 1" class="collect_item" v-for="(item,index) in collectList" :key="index" @click="toHome">
+		<view v-if="followType == 1" class="collect_item" v-for="(item,index) in collectList" :key="index" @click="toHome(item.communityName)">
 			<view class="collect_item_inner">
 				<view class="collect_item_inner_left">
 					<view>{{item.communityName}}</view>
@@ -27,7 +27,7 @@
 				<view class="collect_item_inner_right">在租 <span>{{item.letRoom}}</span>套</view>
 			</view>
 		</view>
-		<view class="empty" v-if="collectList.length == 0">
+		<view class="empty" v-if="collectList.length == 0 || !collectList">
 			<image src="../../static/noFollow.png" mode="aspectFit"></image>
 			<view>暂无关注</view>
 		</view>
@@ -57,7 +57,8 @@
 			this.getFollowList(this.followType)
 		},
 		methods: {
-			toHome(){
+			toHome(communityName){
+				this.$store.commit('SET_NAME',communityName)
 				uni.switchTab({
 					url:'../index/index'
 				})
@@ -80,16 +81,20 @@
 				}).then((res) =>{
 					this.init = true
 					if(this.followType == 3){
-						res.data.data.map(item=>item.realName = item.realName.substr(0,1))
+						if(res.data.data){
+							res.data.data.map(item=>item.realName = item.realName.substr(0,1))
+						}
 					}
 					if(this.followType == 2){
-						res.data.data.forEach((item, index) => {
-							if (item.roomImgs == '') {
-								item.roomImgs = ['../../static/house1.jpg'];
-							} else {
-								item.roomImgs = item.roomImgs.split(',');
-							}
-						});
+						if(res.data.data){
+							res.data.data.forEach((item, index) => {
+								if (item.roomImgs == '') {
+									item.roomImgs = ['../../static/defaultHouse.jpg'];
+								} else {
+									item.roomImgs = item.roomImgs.split(',');
+								}
+							});
+						}
 					}
 					this.collectList = res.data.data
 				})

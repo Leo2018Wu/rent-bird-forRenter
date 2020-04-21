@@ -82,7 +82,7 @@ export default {
 				.then(res => {
 					res.data.data.forEach((item, index) => {
 						if (item.roomImgs == '') {
-							item.roomImgs = ['../../static/house1.jpg'];
+							item.roomImgs = ['../../static/defaultHouse.jpg'];
 						} else {
 							item.roomImgs = item.roomImgs.split(',');
 						}

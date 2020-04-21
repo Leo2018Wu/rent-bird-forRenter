@@ -56,6 +56,14 @@
 				"navigationBarTitleText": "使用协议及隐私政策"
 			}
         }
+        ,{
+            "path" : "pages/spread/spread",
+            "style" : {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "推广收租鸟"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
