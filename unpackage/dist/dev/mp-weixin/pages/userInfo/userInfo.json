@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "基本信息",
-  "disableScroll": true,
-  "usingComponents": {
-    "evan-form": "/components/evan-form/evan-form",
-    "evan-form-item": "/components/evan-form/evan-form-item"
-  }
-}

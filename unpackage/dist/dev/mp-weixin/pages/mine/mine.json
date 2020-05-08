@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "我的",
-  "disableScroll": true,
-  "usingComponents": {
-    "login-modal": "/components/rent_login/rent_login"
-  }
-}

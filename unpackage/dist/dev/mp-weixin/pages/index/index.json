@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "房源",
-  "disableScroll": true,
-  "usingComponents": {
-    "login-modal": "/components/rent_login/rent_login",
-    "room-sku": "/components/roomSku/roomSku"
-  }
-}

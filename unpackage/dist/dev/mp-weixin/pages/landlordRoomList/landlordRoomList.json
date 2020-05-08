@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "房东",
-  "usingComponents": {
-    "room-sku": "/components/roomSku/roomSku"
-  }
-}

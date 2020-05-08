@@ -43,5 +43,6 @@
   "navigateToMiniProgramAppIdList": [
     "wx2d48bdae69b0cd75"
   ],
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap5.json"
 }

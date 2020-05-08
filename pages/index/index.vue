@@ -1,6 +1,7 @@
 <template>
 	<view class="myContainer">
-		<!-- <cover-image src="../../static/position.png" mode="aspectFit" @click.stop="getLocation"></cover-image> -->
+		<cover-image class="control1" src="../../static/refresh.png" mode="aspectFit" @click.stop="refresh"></cover-image>
+		<cover-image class="control2" src="../../static/position.png" mode="aspectFit" @click.stop="resetLoca"></cover-image>
 		<map style="width: 100%; height: 100vh;" :show-location="true" :latitude="map.latitude" :longitude="map.longitude" :scale="map.scale" :markers="map.markers" @callouttap="calloutTap" />
 		<view v-if="isAuthorized" class="community" @catchtouchmove="true" :class="{ community_show: showBox }">
 			<image class="community_drop_icon" mode="aspectFit" @click="hideList" src="../../static/drop_down.png"></image>
@@ -105,8 +106,16 @@ export default {
 		this.getLocation();
 	},
 	methods: {
+		refresh(){
+			this.map.markers = []
+			this.findCommAll();
+		},
+		resetLoca(){
+			this.map.latitude = "";
+			this.map.longitude = "";
+			this.getLocation();
+		},
 		getUserInfo(e) {
-			console.log(e);
 			let _this = this;
 			if (e.detail.errMsg == 'getUserInfo:fail auth deny') return;
 			let par = {
@@ -119,7 +128,6 @@ export default {
 			});
 		},
 		retunEmit(){
-			console.log('nihao')
 			this.isShowLoginModal = false
 		},
 		//逃避微信审核
@@ -351,12 +359,12 @@ export default {
 .community {
 	transition: 0.6s;
 	width: 100%;
-	height: 726rpx;
+	height: 926rpx;
 	background-color: #ffffff;
 	padding: 20rpx 0 80rpx 0;
 	position: fixed;
 	z-index: 99;
-	bottom: -726rpx;
+	bottom: -926rpx;
 	left: 0;
 	border-top-left-radius: 24rpx;
 	border-top-right-radius: 24rpx;
@@ -479,12 +487,20 @@ export default {
 		margin: 50rpx auto 0 auto;
 	}
 }
-cover-image{
+.control1{
 	width: 62rpx;
 	height: 62rpx;
 	position: fixed;
 	z-index: 999;
 	top: 52rpx;
+	right: 32rpx;
+}
+.control2{
+	width: 62rpx;
+	height: 62rpx;
+	position: fixed;
+	z-index: 999;
+	top: 134rpx;
 	right: 32rpx;
 }
 </style>

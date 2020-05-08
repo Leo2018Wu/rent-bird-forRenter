@@ -3,7 +3,7 @@
 		<view class="swiper">
 			<swiper :indicator-dots="false" autoplay="true" interval="5000" duration="1000" @change="swiperChange">
 				<block v-for="(item, index) in roomInfo.roomImgs" :key="index">
-					<swiper-item >
+					<swiper-item @click="prview">
 						<image :src="item" class="swiper_image" mode="aspectFill"/>
 					</swiper-item>
 				</block>
@@ -34,12 +34,13 @@
 					<view class="content_intro_li_name">入住</view>
 				</view>
 			</view>
-			<view class="content_facility">
+			<view class="content_facility" v-if="roomInfo.label.length != 0">
 				<view class="content_facility_li" v-for="(item,index) in roomInfo.label" :key="index">{{item.name}}</view>
 			</view>
 			<view class="content_other">
-				<view class="content_other_item"><span>租期：</span>{{roomInfo.tenancyTerm}}</view>
+				<view class="content_other_item"><span>租期：</span>{{rentDateList[roomInfo.tenancyTerm]}}</view>
 				<view class="content_other_item"><span>看房：</span>{{seeApaList[roomInfo.seeTheApartment]}}</view>
+				<view class="content_other_item"><span>中介费：</span>{{agencyFee[roomInfo.intermePrice]}}</view>
 			</view>
 		</view>
 		<view class="introduce" :class="{addPadding:roomInfo.tenants.length == 0}">
@@ -78,6 +79,15 @@
 			</view>
 			<view class="btnBox_contact" @click="contactOwner">联系房东</view>
 		</view>
+		<!-- 反馈弹窗 -->
+		<view class="contactMask" v-if="isShowFeedBackBox" @click="hideModal"></view>
+		<view class="feedBack" v-if="isShowFeedBackBox">
+			<view>您有信息需要反馈吗？</view>
+			<view class="feedBack_list">
+				<view class="feedBack_list_li" :class="{feedBack_list_liActive:feedbackIndex == index}" v-for="(item,index) in feedbackList" :key="index" @click="chooseFeedBack(index)">{{item}}</view>
+			</view>
+			<view class="feedBack_list_btn" @click="sumbit">提交</view>
+		</view>
 		<!-- contact弹窗 -->
 		<cover-view v-if="isShowContactModal" @click="hideModal" @catchtouchmove="true" class="contactMask"></cover-view>
 		<cover-view v-if="isShowContactModal" class="contact_modal">
@@ -102,7 +112,13 @@
 	export default {
 		data() {
 			return {
+				roomId:"",
+				isShowFeedBackBox:false,
+				feedbackIndex:null,
+				feedbackList:['号码错误','房源虚假','已出租'],
+				agencyFee:['面议','35%','50%'],
 				init:false,
+				rentDateList:['可短租','一年以上'],
 				seeApaList:['随时看房','周末看房','工作日看房'],
 				orientationList:['东','南','西','北'],
 				isShowContactModal:false,
@@ -157,12 +173,41 @@
 			 ...mapState(['user']) 
 		},
 		onLoad(option) {
+			this.roomId = option.roomId
 			this.getRoomInfo(option.roomId,option.houseId)
 			// setTimeout(()=>{
 				this.vistiRoom(option.roomId)
 			// },2000)
 		},
 		methods: {
+			prview(){
+				let _this = this
+				uni.previewImage({
+					urls:_this.roomInfo.roomImgs,
+					current:Number(_this.swiperCurrent) - 1
+				})
+			},
+			sumbit(){
+				if(!this.feedbackIndex && typeof(this.feedbackIndex)!="undefined" && this.feedbackIndex!=0){
+					uni.showToast({
+						title:'请先选择反馈类型',
+						icon:'none'
+					})
+					return
+				}
+				let par = this.feedbackIndex == 0 ? 2 : this.feedbackIndex == 1 ? 3 : 1
+				this.$request.feedBack({feedbackType:par,id:this.roomId}).then((res)=>{
+					this.isShowFeedBackBox = false
+					if(res.data.code == 200){
+						uni.showToast({
+							title:'感谢您的反馈',
+						})
+					}
+				})
+			},
+			chooseFeedBack(index){
+				this.feedbackIndex = index
+			},
 			follow(type){
 				let _this = this
 				let par = {
@@ -223,27 +268,32 @@
 						}
 					})
 					data.label = arr
-					data.tenancyTerm = JSON.parse(data.tenancyTerm)
-					let str = ''
-					data.tenancyTerm.forEach((item,index) =>{
-						console.log(item)
-						if(item.isChecked){
-							if(index == (data.tenancyTerm.length - 1)){
-								str+=item.name
-							}else{
-								str+=item.name+'/'
-							}
-						}
-					})
-					data.tenancyTerm = str
+					// data.tenancyTerm = JSON.parse(data.tenancyTerm)
+					// let str = ''
+					// data.tenancyTerm.forEach((item,index) =>{
+					// 	console.log(item)
+					// 	if(item.isChecked){
+					// 		if(index == (data.tenancyTerm.length - 1)){
+					// 			str+=item.name
+					// 		}else{
+					// 			str+=item.name+'/'
+					// 		}
+					// 	}
+					// })
+					// data.tenancyTerm = str
 					data.roomConfigure = JSON.parse(data.roomConfigure)
+					data.intermePrice = parseInt(data.intermePrice) ? parseInt(data.intermePrice) - 1 : 0
 					_this.roomInfo = data
 				})
 			},
 			callPhone(){
 				let _this = this
 				uni.makePhoneCall({
-				  phoneNumber: _this.roomInfo.landlordPhone
+				  phoneNumber: _this.roomInfo.landlordPhone,
+				  success() {
+				  	_this.isShowFeedBackBox = true;
+					_this.isShowContactModal = false;
+				  }
 				})
 			},
 			contactOwner(){
@@ -251,6 +301,7 @@
 			},
 			hideModal(){
 				this.isShowContactModal = false;
+				this.isShowFeedBackBox = false;
 			},
 			swiperChange(e){
 				this.swiperCurrent = e.detail.current +1;
@@ -352,11 +403,13 @@
 		}
 		&_other{
 			width: 100%;
-			display: flex;
 			color: #444444;
 			font-size: 30rpx;
-			&_item:first-of-type{
-				margin-right: auto;
+			&_item{
+				margin-bottom: 30rpx;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
 			}
 			span{
 				font-weight: bold;
@@ -590,5 +643,53 @@
 	}
 	.addPadding{
 		padding: 50rpx 40rpx 180rpx 40rpx;
+	}
+	.feedBack{
+		width: 584rpx;
+		height: 410rpx;
+		position: fixed;
+		left: 83rpx;
+		top: 20%;
+		z-index: 100;
+		background-color: #FFFFFF;
+		border-radius: 15rpx;
+		text-align: center;
+		padding: 40rpx 52rpx;
+		color: #333333;
+		font-size: 34rpx;
+		font-weight: bold;
+		&_list{
+			width: 100%;
+			height: 54rpx;
+			margin: 66rpx 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&_li{
+				width: calc((100% - 30rpx) / 3);
+				height: 100%;
+				border-radius: 10rpx;
+				text-align: center;
+				color: #A1A1A3;
+				font-weight: normal;
+				background-color: #F5F4F9;
+				font-size: 26rpx;
+				line-height: 54rpx;
+			}
+			&_liActive{
+				color: #FFFFFF;
+				background-color: $base-color;
+			}
+			&_btn{
+				width: 480rpx;
+				height: 92rpx;
+				border-radius: 15rpx;
+				background-color: $base-color;
+				color: #FFFFFF;
+				font-weight: bold;
+				font-size: 32rpx;
+				line-height: 92rpx;
+			}
+		}
 	}
 </style>
